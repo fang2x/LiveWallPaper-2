@@ -105,7 +105,7 @@ public class VideoLiveWallpaper extends WallpaperService {
 			mMediaPlayer.setSurface(holder.getSurface());
 			try {
 				AssetManager assetMg = getApplicationContext().getAssets();
-				AssetFileDescriptor fileDescriptor = assetMg.openFd("wallpaper.mp4");
+				AssetFileDescriptor fileDescriptor = assetMg.openFd("raw/wallpaper.mp4");
 				mMediaPlayer.setDataSource(fileDescriptor.getFileDescriptor(),
 						fileDescriptor.getStartOffset(), fileDescriptor.getLength());
 				mMediaPlayer.setLooping(true);
