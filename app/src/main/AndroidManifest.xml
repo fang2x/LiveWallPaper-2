@@ -3,8 +3,8 @@
     package="com.cherish.livewallpaper">
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".App"
@@ -13,20 +13,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.cherish.livewallpaper.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
         <!-- 配置实时壁纸Service -->
         <service
-            android:name="com.cherish.livewallpaper.VideoLiveWallpaper"
+            android:name=".VideoLiveWallpaper"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_WALLPAPER"
             android:process=":wallpaper">
+
             <!-- 为实时壁纸配置intent-filter -->
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
@@ -36,11 +29,16 @@
                 android:name="android.service.wallpaper"
                 android:resource="@xml/livewallpaper" />
         </service>
-        <service android:name=".LiveService" />
-
         <activity
-            android:name=".LiveActivity"
-            android:theme="@style/LiveStyle" />
+            android:name=".IndexActivity"
+            android:label="@string/title_activity_index"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

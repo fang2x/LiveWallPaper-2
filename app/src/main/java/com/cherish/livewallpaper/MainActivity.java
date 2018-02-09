@@ -19,20 +19,6 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		final ScreenManager screenManager = ScreenManager.getInstance(MainActivity.this);
-		ScreenBroadcastListener listener = new ScreenBroadcastListener(this);
-		listener.registerListener(new ScreenBroadcastListener.ScreenStateListener() {
-			@Override
-			public void onScreenOn() {
-				screenManager.finishActivity();
-			}
-
-			@Override
-			public void onScreenOff() {
-				screenManager.startActivity();
-			}
-		});
-		LiveService.toLiveService(this);
 		mCbVoice = (CheckBox) findViewById(R.id.id_cb_voice);
 		Button btnSet = (Button) findViewById(R.id.btn_set);
 		mCbVoice.setOnCheckedChangeListener(
