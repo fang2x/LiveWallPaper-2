@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 public class MainActivity extends AppCompatActivity {
 
 	private CheckBox mCbVoice;
@@ -55,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
 
 	public void setVideoToWallPaper() {
 		VideoLiveWallpaper.setToWallPaper(this, 111);
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		App application = (App) getApplication();
+		Tracker mTracker = application.getDefaultTracker();
+		mTracker.setScreenName(this.getClass().getSimpleName());
+		mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 	}
 
 	@Override

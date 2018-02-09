@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_number": "1008683254416",
+    "project_id": "boyinlingmeng"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008683254416:android:24f19d9d668e39b5",
+        "android_client_info": {
+          "package_name": "com.cherish.livewallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008683254416-fpkkkpsiggtgubbeiu3ol54pdmdokeeu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU4df2uYmLICrhmdStsvapYnjjWO6TQsk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-113876605-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
